@@ -1,0 +1,69 @@
+using System;
+using System.Globalization;
+using Atividade_4;
+namespace PrimeiroProjeto
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double ac, bc, cc;
+            bool teste = true;
+
+            Console.WriteLine("Insira valores para os lados A, B e C de um triângulo");
+            triangulo x = new triangulo();
+            while (teste)
+            {
+                ac = double.Parse(Console.ReadLine());
+                if (ac <= 0)
+                {
+                    teste = true;
+                    Console.WriteLine("Digite um valor maior que zero!");
+                }
+                else
+                {
+                    teste = false;
+                    x.A = ac;
+                }
+            }teste = true;
+            
+            while (teste)
+            {
+                bc = double.Parse(Console.ReadLine());
+                if (bc <= 0)
+                {
+                    teste = true;
+                    Console.WriteLine("Digite um valor maior que zero!");
+                }
+                else
+                {
+                    teste = false;
+                    x.B = bc;
+                }
+            }teste = true;
+
+            while (teste)
+            {
+                cc = double.Parse(Console.ReadLine());
+                if (cc <= 0)
+                {
+                    teste = true;
+                    Console.WriteLine("Digite um valor maior que zero!");
+                }
+                else
+                {
+                    teste = false;
+                    x.C = cc;
+                }
+            }teste = true;
+
+            Console.WriteLine();
+
+            x.definirtriangulo();
+            Console.WriteLine();
+            Console.WriteLine("Pressione qualquer tecla para continuar...");
+            Console.ReadKey();
+
+        }
+    }
+}

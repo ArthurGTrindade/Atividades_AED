@@ -1,0 +1,37 @@
+using System;
+using System.Globalization;
+using Atividade_3;
+namespace PrimeiroProjeto
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Nome
+            Console.WriteLine("Digite o nome do vendedor:");
+            vendedor x = new vendedor();
+            x.Nome = Console.ReadLine();
+            Console.WriteLine();
+            
+            //Salário Fixo
+            Console.WriteLine("Digite o salário do vendedor:");
+            x.Salariofixo = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+            
+            //Quantidade Vendida
+            Console.WriteLine("Informe a quantidade vendida por este vendedor:");
+            x.Totalvendas = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            //Chamando Métodos
+            x.calcularfinal();
+            x.imprimirDados();
+
+            //Fim
+            Console.WriteLine();
+            Console.WriteLine("Pressione qualquer tecla para finalizar...");
+            Console.ReadKey();
+        }
+    }
+}
+

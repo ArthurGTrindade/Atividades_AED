@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Atividade_3
+{
+    internal class vendedor
+    {
+        //Declarando variáveis USANDO VÍRGULA PARA SEPARAR CASAS DECIMAIS
+        private string nome;
+        private double salariofixo;
+        private double totalvendas;
+        public double totalfinal;
+
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        public double Salariofixo 
+        { 
+            get { return salariofixo; }
+            set { salariofixo = value; } 
+        }
+
+        public double Totalvendas
+        {
+            get { return totalvendas; }
+            set { totalvendas = value;}
+        }
+
+        public double Totalfinal
+        {
+            get { return totalfinal; }
+            set { totalfinal = value;}
+        }
+
+        
+        //Método de Cálculo
+        public void calcularfinal()
+        {
+            totalfinal = salariofixo + ((totalvendas / 100) * 15);
+        }
+        //Método usado para imprimir dados
+        public void imprimirDados()
+        {
+            Console.WriteLine("O nome do vendedor é: " + nome);
+            Console.WriteLine("O salário do vendedor é: " + salariofixo.ToString("C"));
+            Console.WriteLine("A quantidade vendida em dinheiro pelo vendedor é: " + totalvendas.ToString("C"));
+            Console.WriteLine("O salário final desse vendedor foi: " + totalfinal.ToString("C"));
+        }
+    }
+}

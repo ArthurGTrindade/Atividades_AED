@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Atividade_4
+{
+    internal class triangulo
+    {
+        private double a;
+        private double b;
+        private double c;
+
+        public double A
+        {
+            get { return a; }
+            set { a = value; }
+        }
+
+        public double B
+        {
+            get { return b; }
+            set { b = value; }
+
+        }
+
+        public double C
+        {
+            get { return c; }
+            set { c = value; }
+
+        }
+
+        public void definirtriangulo()
+        {
+            if (a >= b + c)
+            {
+                Console.WriteLine("NÃO FORMA TRIÂNGULO");
+            }else if (a == b && b == c && a == c)
+            {
+                Console.WriteLine("Triângulo Equilátero");
+            }else if (a == b && a != c || b == c && b != a || a == c && a != b )
+            {
+                Console.WriteLine("Triângulo Isóceles");
+            }else if (Math.Pow(a,2) == Math.Pow(b,2) + Math.Pow(c,2))
+            {
+                Console.WriteLine("Triângulo Retângulo");
+            }else if (Math.Pow(a, 2) > Math.Pow(b, 2) + Math.Pow(c, 2))
+            {
+                Console.WriteLine("Triângulo Obtusângulo");
+            }else if (Math.Pow(a, 2) < Math.Pow(b, 2) + Math.Pow(c, 2))
+            {
+                Console.WriteLine("Triângulo Acutângulo");
+            }
+        }
+    }
+}
